@@ -1,0 +1,63 @@
+.header {
+  min-height: 100vh;
+}
+.welcome {
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  height: calc(100vh);
+  padding-top: 64px;
+}
+.btn-primary {
+  font-size: calc(10px + 2vmin);
+}
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  flex-direction: row;
+}
+
+.welcome__vasya {
+  flex-basis: 55%;
+  background-image: url("../../../images/OIG.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: change-background 18s infinite;
+}
+@keyframes change-background {
+  0% {
+    background-image: url("../../../images/Petya.jpg");
+  }
+  20.33% {
+    background-image: url("../../../images/OIG.jpg");
+  }
+  33.33% {
+    background-image: url("../../../images/OIG.jpg");
+  }
+  53.33% {
+    background-image: url("../../../images/Bernard.jpg");
+  }
+  66.66% {
+    background-image: url("../../../images/Bernard.jpg");
+  }
+  87% {
+    background-image: url("../../../images/Petya.jpg");
+  }
+  100% {
+    background-image: url("../../../images/Petya.jpg");
+  }
+}
+.content {
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.text {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: calc(10px + 1vmin);
+}

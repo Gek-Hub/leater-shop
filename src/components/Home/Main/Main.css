@@ -1,0 +1,89 @@
+.main {
+  padding-top: 10px;
+}
+.section__about {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.section__about button {
+  margin-top: -30px;
+}
+
+.about__text {
+  flex: 0 0 calc(50% - 10px); /* Устанавливаем ширину элемента */
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.main section h2 {
+  font-size: 36px;
+}
+
+.main section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.main section ul {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.main section li {
+  margin-bottom: 10px;
+}
+.section__FAQ {
+  color: #f5f5f5;
+  text-align: center;
+  background-color: #444;
+}
+main .section__FAQ h2 {
+  font-size: 64px;
+  margin-bottom: 50px;
+}
+.faq-carusel {
+  height: 300px;
+  text-align: center;
+}
+main .faq-carusel h3 {
+  font-style: italic;
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+main .faq-carusel p {
+  font-size: 26px;
+}
+main .section__FAQ button {
+  margin: 20px;
+}
+main .section__more-about p {
+  padding: 0 30px 20px 60px;
+  font-size: 24px;
+  margin: 0;
+}
+main .section__more-about h2 {
+  padding: 30px;
+  text-align: center;
+  font-style: italic;
+}
+main .section__find-us {
+  background-color: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+main .section__find-us h2 {
+  padding: 30px;
+  text-align: center;
+  font-style: italic;
+}
+main .section__find-us p {
+  padding: 0 30px 20px 60px;
+  font-size: 24px;
+  margin: 0;
+}

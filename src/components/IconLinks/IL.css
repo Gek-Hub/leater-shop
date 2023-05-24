@@ -1,0 +1,12 @@
+.icons {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+}
+.icons__item {
+  margin-right: 20px;
+  width: 40px;
+}
+.icons__item:last-child {
+  margin: 0;
+}

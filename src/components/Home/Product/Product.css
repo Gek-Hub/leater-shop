@@ -1,0 +1,121 @@
+.product-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-image-slider {
+  flex: 30%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.product-image-slider img {
+  border-radius: 80px;
+  overflow: hidden;
+}
+.product-details {
+  flex: 50%;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.product-details select {
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-shadow: -1px 1px 3px -1px #333;
+}
+.product-name {
+  font-size: 24px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.product-props {
+  margin-right: 30px;
+}
+.product-review {
+  width: 45%;
+  position: relative;
+}
+.review-image-container {
+  display: flex;
+  justify-content: right;
+}
+.review-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: -25px;
+  margin-right: -5px;
+  box-shadow: 1px 0px 2px 0px #333;
+}
+.product-review h3 {
+  margin-bottom: 20px;
+}
+.review-text {
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  border-bottom-right-radius: 25px;
+  box-shadow: -1px -1px 3px 0px #333;
+  padding: 8px;
+}
+section .product-review p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.product-price {
+  font-size: 12px;
+  margin-right: 5px;
+  text-decoration: line-through;
+}
+
+.product-discount {
+  font-size: 24px;
+  color: red;
+  margin-right: 10px;
+}
+
+.buy-button {
+  font-size: 20px;
+  background-color: #198734;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow: -1px 1px 3px 0px #333;
+  transition: all 0.1s ease-in-out;
+}
+
+.buy-button:hover {
+  background-color: darkgreen;
+  box-shadow: 0px 0px 1px 0px #333;
+}
+/* The animation code */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* The element to apply the animation to */
+.loader {
+  width: 100px;
+  height: 100px;
+  border: 10px solid lightgray;
+  border-top: 10px solid blue;
+  border-radius: 50%;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}

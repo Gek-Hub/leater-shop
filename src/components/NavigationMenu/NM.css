@@ -1,0 +1,50 @@
+.logo {
+  text-align: center !important;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 1px;
+  color: #f5f5f5;
+  margin-right: calc(50vw - 420px);
+}
+.logo span {
+  font-size: 14px;
+  letter-spacing: 0px;
+}
+.nav-link {
+  color: #f5f5f5dd;
+  font-family: "Lato", sans-serif;
+  opacity: 0.7;
+}
+.nav-link:hover {
+  opacity: 0.8;
+  color: #ffffff;
+  border-bottom: 1px #f5f5f5 solid;
+}
+.nav-link.active {
+  border-bottom: 1px #f5f5f5 solid;
+  opacity: 1;
+}
+.navbar {
+  background: #1a1a1a;
+  opacity: 0.9;
+  z-index: 1000;
+}
+.navbar:hover {
+  opacity: 1;
+}
+.navbar .user-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.navbar .user-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 1px 0px 2px 0px #333;
+  object-fit: cover;
+  box-shadow: 1px 0px 2px 0px #333;
+}

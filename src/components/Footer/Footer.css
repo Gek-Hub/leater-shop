@@ -1,0 +1,32 @@
+.footer .logo {
+  width: 14rem;
+  display: inline-flex;
+  margin: 0;
+}
+.logo-text {
+  display: grid;
+  align-content: center;
+}
+.logo img {
+  width: 100%;
+}
+.footer {
+  opacity: 1;
+}
+.footer .navbar-nav {
+  margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .navbar-nav p {
+  color: #eee;
+}
+.footer .navbar-nav span {
+  color: bisque;
+}
+.footer .d-flex {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

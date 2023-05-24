@@ -1,0 +1,50 @@
+.profile {
+  color: #333333;
+}
+.profile h1 {
+  margin: 20px auto;
+  text-align: center;
+}
+.profile p {
+  margin-top: 20px;
+}
+.user-data button {
+  margin: 20px;
+  padding: 5px 15px;
+}
+.button:disabled {
+  opacity: 0.5;
+}
+.profile .container {
+  margin-top: 64px;
+  padding-top: 20px;
+  min-height: calc(100vh - 64px);
+}
+.profile .content {
+  display: flex;
+  flex-basis: content;
+  flex-direction: row;
+}
+.user-image {
+  flex: 40%;
+}
+.user-image img {
+  width: 90%;
+}
+.user-data {
+  flex: 60%;
+}
+.user-data input {
+  width: 60%;
+  border-radius: 5px;
+  border: 1px #333333 solid;
+}
+.user-data textarea {
+  width: 70%;
+  border: 1px #333333 solid;
+  border-radius: 5px;
+}
+.error {
+  color: red;
+  font-size: 12px;
+}

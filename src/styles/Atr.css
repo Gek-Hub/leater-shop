@@ -1,0 +1,26 @@
+.atr-form {
+  height: calc(80vh - 80px);
+  margin-top: 80px;
+  padding: 30px 50px;
+  text-align: center;
+  align-items: center;
+  border-radius: 15px;
+  width: fit-content;
+}
+#error-message {
+  color: red;
+}
+.atr-form {
+  display: flex;
+  flex-direction: column;
+}
+button[type="submit"] {
+  width: 200px;
+  margin: 20px auto;
+}
+.atr-label {
+  margin: 20px;
+}
+a {
+  font-size: 0.8rem;
+}
