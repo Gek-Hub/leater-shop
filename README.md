@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# SOLID LEATH Shop
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run dev`
+
+Runs **npm start** and **server.py**
 
 ### `npm start`
 
