@@ -6,13 +6,15 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./NM.css";
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import getQueryParams from "../getQueryParams";
 import scrollTo from "../scrollTo";
 import haveFileInPath from "../haveFileInPath";
 function NavScroll(props) {
   let [id, setId] = useState(getQueryParams()["id"]);
   const [userImage, setUserImage] = useState("./images/users/no_file.jpg");
+  const location = useLocation();
+  const [isHome, setIsHome] = useState(location.pathname === "/");
   const navigate = useNavigate();
   function handleLogout() {
     // код для выхода из системы
@@ -49,10 +51,7 @@ function NavScroll(props) {
   return (
     <Navbar className='fixed-top' variant='dark' dark='true' expand='lg'>
       <Container fluid>
-        <Navbar.Brand
-          className='logo'
-          href={`http://localhost:3000/${id ? "?id=" + id : ""}#Home`}
-        >
+        <Navbar.Brand className='logo' href={`/${id ? "?id=" + id : ""}#Home`}>
           <div>
             SOLID LEATH
             <br />
@@ -66,46 +65,47 @@ function NavScroll(props) {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link
-              href={`http://localhost:3000/${id ? "?id=" + id : ""}#Home`}
-            >
-              Домой
+            <Nav.Link href={`/${id ? "?id=" + id : ""}#Home`}>Домой</Nav.Link>
+            <Nav.Link href={`/${id ? "?id=" + id : ""}#about`}>
+              О нашем продукте
             </Nav.Link>
-            <Nav.Link href='#about'>О нашем продукте</Nav.Link>
-            <Nav.Link href='#FAQ' onClick={scrollTo}>
+            <Nav.Link
+              href={isHome ? "#FAQ" : `/${id ? "?id=" + id : ""}#FAQ`}
+              onClick={isHome ? scrollTo : null}
+            >
               FAQ
             </Nav.Link>
             <NavDropdown title='Категории' id='navbarScrollingDropdown'>
               <NavDropdown.Item href='#' disabled>
                 Выберите категорию товара
               </NavDropdown.Item>
-              <NavDropdown.Item href='goods?filter=male'>
+              <NavDropdown.Item href='/goods?filter=male'>
                 Мужская одежда
               </NavDropdown.Item>
-              <NavDropdown.Item href='goods?filter=female'>
+              <NavDropdown.Item href='/goods?filter=female'>
                 Женская одежда
               </NavDropdown.Item>
-              <NavDropdown.Item href='goods?filter=jacket'>
+              <NavDropdown.Item href='/goods?filter=jacket'>
                 Куртки
               </NavDropdown.Item>
-              <NavDropdown.Item href='goods?filter=coat'>
+              <NavDropdown.Item href='/goods?filter=coat'>
                 Пальто
               </NavDropdown.Item>
-              <NavDropdown.Item href='goods?filter=pants'>
+              <NavDropdown.Item href='/goods?filter=pants'>
                 Штаны
               </NavDropdown.Item>
-              <NavDropdown.Item href='goods?filter=accs'>
+              <NavDropdown.Item href='/goods?filter=accs'>
                 Аксессуары
               </NavDropdown.Item>
-              <NavDropdown.Item href='goods?filter=bags'>
+              <NavDropdown.Item href='/goods?filter=bags'>
                 Сумки/рюкзаки
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href='goods?filter=all'>
+              <NavDropdown.Item href='/goods?filter=all'>
                 Все товары
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href='#contacts'>Контакты</Nav.Link>
+            <Nav.Link href='/#contacts'>Контакты</Nav.Link>
           </Nav>
           <Form className='d-flex'>
             {id ? (
